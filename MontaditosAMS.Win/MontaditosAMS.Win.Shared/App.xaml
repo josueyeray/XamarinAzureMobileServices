@@ -1,0 +1,26 @@
+﻿<Application
+    x:Class="MontaditosAMS.Win.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MontaditosAMS.Win">
+    
+    <Application.Resources>
+        <DataTemplate x:Key="ItemTemplate">
+            <Grid MaxWidth="420" HorizontalAlignment="Left" Margin="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="128"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Image Grid.Column="0" Source="{Binding Url}"/>
+                <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                    <TextBlock VerticalAlignment="Center" Text="{Binding Name}"
+                           FontWeight="Bold" FontSize="32" TextTrimming="CharacterEllipsis"/>
+                    <TextBlock VerticalAlignment="Center" Text="{Binding Name}"
+                           FontWeight="Light" FontSize="20" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Application.Resources>
+
+</Application>
